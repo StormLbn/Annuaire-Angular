@@ -1,0 +1,25 @@
+
+<div class="card">
+
+    <h3>
+        {{ contact.contactName }}
+    </h3>
+
+    <div>
+        <img [src]=contact.photoUrl alt="photo" class="photo">
+        <ul>
+            <li>Contact n°{{ contact.id }}</li>
+            <li>Né le {{ contact.birthDate }}</li>
+            <li>Adresse : {{ contact.address }}, {{ contact.city }}</li>
+            <li>Téléphone : {{ contact.phone }}</li>
+        </ul>
+    </div>
+
+    <h4 [ngClass]="{
+        'supplier' : contact.contactType === 'Fournisseur',
+        'client' : contact.contactType === 'Client'
+    }">
+        {{ contact.contactType }}
+    </h4>
+
+</div>

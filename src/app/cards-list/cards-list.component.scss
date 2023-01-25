@@ -1,0 +1,8 @@
+app-card {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+
+    border: 1px solid black;
+    border-radius: 11px;
+}

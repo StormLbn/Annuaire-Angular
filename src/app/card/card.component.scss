@@ -1,0 +1,41 @@
+.photo {
+    height: 100px;
+}
+
+.card div {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.card ul {
+    padding: 0 20px;
+}
+
+.card li {
+    list-style-type: none;
+}
+
+h3 {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 8px;
+    border-radius: 10px 10px 0 0;
+}
+
+h4 {
+    text-align: center;
+    margin: 0;
+    padding: 8px;
+    border-radius: 0 0 10px 10px;
+}
+
+.client {
+    background-color: lightblue;
+}
+
+.supplier {
+    background-color: lightcoral;
+}
+

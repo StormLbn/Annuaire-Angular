@@ -1,8 +1,7 @@
-app-card {
+.cards-container {
     display: flex;
-    flex-flow: column nowrap;
-    align-items: stretch;
-
-    border: 1px solid black;
-    border-radius: 11px;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap : 15px;
 }

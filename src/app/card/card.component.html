@@ -1,25 +1,20 @@
 
-<div class="card">
-
-    <h3>
-        {{ contact.contactName }}
-    </h3>
+<div class="card" (click) = "goToDetails()" [ngClass]="{
+    'supplier' : contact.contactType === 'Fournisseur',
+    'client' : contact.contactType === 'Client'
+}">
 
     <div>
-        <img [src]=contact.photoUrl alt="photo" class="photo">
-        <ul>
-            <li>Contact n°{{ contact.id }}</li>
-            <li>Né le {{ contact.birthDate }}</li>
-            <li>Adresse : {{ contact.address }}, {{ contact.city }}</li>
-            <li>Téléphone : {{ contact.phone }}</li>
-        </ul>
+        <h3>
+            {{ contact.contactName }}
+        </h3>
+        <h4>
+            {{ contact.contactType }}
+        </h4>
     </div>
 
-    <h4 [ngClass]="{
-        'supplier' : contact.contactType === 'Fournisseur',
-        'client' : contact.contactType === 'Client'
-    }">
-        {{ contact.contactType }}
-    </h4>
+    <div class="photo">
+        <img [src]=contact.photoUrl alt="photo">
+    </div>
 
 </div>

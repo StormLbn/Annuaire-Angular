@@ -1,11 +1,36 @@
-.photo {
-    height: 100px;
+.client {
+    background-color: lightblue;
 }
 
-.card div {
-    display: flex;
-    flex-flow: row nowrap;
+.supplier {
+    background-color: lightcoral;
 }
+
+
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 8px black;
+}
+
+.photo img {
+    width: 100%;
+    border-radius: 100px;
+    border: 3px solid black;
+}
+
+.photo {
+    max-width: 100px;
+}
+
+// .card div {
+//     display: flex;
+//     flex-flow: column nowrap;
+// }
 
 .card ul {
     padding: 0 20px;
@@ -15,27 +40,16 @@
     list-style-type: none;
 }
 
-h3 {
-    background-color: darkblue;
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 8px;
-    border-radius: 10px 10px 0 0;
+h3, h4 {
+    margin: 10px;
+    padding: 0px;
 }
 
-h4 {
-    text-align: center;
-    margin: 0;
-    padding: 8px;
-    border-radius: 0 0 10px 10px;
-}
+// h4 {
+//     text-align: center;
+//     margin: 0;
+//     padding: 8px;
+//     border-radius: 0 0 10px 10px;
+// }
 
-.client {
-    background-color: lightblue;
-}
-
-.supplier {
-    background-color: lightcoral;
-}
 

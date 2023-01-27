@@ -7,6 +7,8 @@ import { HeadNavComponent } from './head-nav/head-nav.component';
 import { CardsListComponent } from './cards-list/cards-list.component';
 import { Route } from './app.routes';
 import { DetailsComponent } from './details/details.component';
+import { FooterComponent } from './footer/footer.component';
+import { AddContactComponent } from './add-contact/add-contact.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { DetailsComponent } from './details/details.component';
     CardComponent,
     HeadNavComponent,
     CardsListComponent,
-    DetailsComponent
+    DetailsComponent,
+    FooterComponent,
+    AddContactComponent
   ],
   imports: [
     BrowserModule,

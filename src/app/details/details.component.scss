@@ -1,0 +1,50 @@
+.card-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    
+    width: fit-content;
+    min-width: 450px;
+    max-width: 800px;
+    height: 200px;
+    margin: auto;
+
+    border: 3px solid black;
+    border-radius: 30px;
+}
+
+.client {
+    background-color: lightblue;
+}
+
+.supplier {
+    background-color: lightcoral;
+}
+
+img {
+    height: 100%;
+    border-radius: 28px 0 0 28px;
+}
+
+.photo {
+    height: 200px;
+    width: 200px;
+}
+
+.infos {
+    margin: 20px;
+}
+
+h2, ul, p {
+    margin : 12px
+}
+
+li {
+    list-style-type: none;
+    text-align: center;
+    margin : 0;
+}
+
+ul {
+    padding: 0;
+}

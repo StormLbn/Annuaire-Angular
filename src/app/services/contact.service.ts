@@ -10,34 +10,42 @@ export class ContactService {
   // Syntaxe de déclaration + initialisation d'une liste objets :
     @Input() contacts : Contact[] = [
       {
-        id : 1,
-        contactName : "Toulemonde Michel",
-        birthDate : "28/02/1972",
+        id : 165,
+        contactName : "Toulemonde",
+        firstName : "Michel",
+        phone : "0123456789",
+        email : "toulemondemichel@mail.com",
         address : "123 rue Bidon",
         city : "Fakeville",
-        phone : "0123456789",
-        contactType : "Client",
-        photoUrl : "../assets/image/Photo.png"
-      },
-      {
-        id : 345,
-        contactName : "Toulemonde Danielle",
-        birthDate : "28/02/1972",
-        address : "123 rue Bidon",
-        city : "Fakeville",
-        phone : "0123456789",
-        contactType : "Client",
-        photoUrl : "../assets/image/Photo.png"
+        postcode : "99000",
+        contactType : "client",
+        photoUrl : "../assets/image/Photo.png",
+        birthDate : "1971-10-11"
       },
       {
         id : 97,
-        contactName : "Dubois Olivier",
-        birthDate : "28/02/1972",
+        contactName : "Société Dubois",
+        phone : "0123456789",
+        email : "dubois@societe.com",
         address : "123 rue Bidon",
         city : "Fakeville",
-        phone : "0123456789",
-        contactType : "Fournisseur",
-        photoUrl : "../assets/image/Photo.png"
+        postcode : "99000",
+        contactType : "fournisseur",
+        photoUrl : "../assets/image/Photo.png",
+        website : "http://www.bois-de-chauffage.net"
+      },
+      {
+        id : 7,
+        contactName : "Sémoa",
+        firstName : "Storm",
+        phone : "0666666666",
+        email : "siderealstorm@mail.com",
+        address : "66 rue Jean Jaurès",
+        city : "Roost-Warendin",
+        postcode : "59286",
+        contactType : "client",
+        photoUrl : "../assets/image/Photo.png",
+        birthDate : "1994-03-26"
       }
     ];
 

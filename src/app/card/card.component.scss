@@ -12,9 +12,15 @@
     flex-flow: column nowrap;
     align-items: center;
 
+    min-width: 200px;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 0 8px black;
+}
+
+
+.photo {
+    max-width: 150px;
 }
 
 .photo img {
@@ -22,15 +28,6 @@
     border-radius: 100px;
     border: 3px solid black;
 }
-
-.photo {
-    max-width: 100px;
-}
-
-// .card div {
-//     display: flex;
-//     flex-flow: column nowrap;
-// }
 
 .card ul {
     padding: 0 20px;
@@ -45,11 +42,8 @@ h3, h4 {
     padding: 0px;
 }
 
-// h4 {
-//     text-align: center;
-//     margin: 0;
-//     padding: 8px;
-//     border-radius: 0 0 10px 10px;
-// }
+h4 {
+    font-weight: normal;
+}
 
 

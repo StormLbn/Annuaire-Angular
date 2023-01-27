@@ -1,20 +1,19 @@
 
 <div class="card" (click) = "goToDetails()" [ngClass]="{
-    'supplier' : contact.contactType === 'Fournisseur',
-    'client' : contact.contactType === 'Client'
+    'supplier' : contact.contactType === 'fournisseur',
+    'client' : contact.contactType === 'client'
 }">
 
-    <div>
-        <h3>
-            {{ contact.contactName }}
-        </h3>
-        <h4>
-            {{ contact.contactType }}
-        </h4>
-    </div>
+    <h3>
+        {{ contact.contactName }} {{ contact.firstName }}
+    </h3>
 
     <div class="photo">
         <img [src]=contact.photoUrl alt="photo">
     </div>
+
+    <h4>
+        {{ contact.contactType | titlecase }}
+    </h4>
 
 </div>

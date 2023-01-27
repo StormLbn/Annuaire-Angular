@@ -10,34 +10,36 @@ export class ContactService {
   // Syntaxe de déclaration + initialisation d'une liste objets :
     @Input() contacts : Contact[] = [
       {
-        id : 1,
-        contactName : "Toulemonde Michel",
-        birthDate : "28/02/1972",
-        address : "123 rue Bidon",
-        city : "Fakeville",
+        id : 165,
+        contactName : "Toulemonde",
+        firstName : "Michel",
         phone : "0123456789",
-        contactType : "Client",
-        photoUrl : "../assets/image/Photo.png"
-      },
-      {
-        id : 345,
-        contactName : "Toulemonde Danielle",
-        birthDate : "28/02/1972",
-        address : "123 rue Bidon",
-        city : "Fakeville",
-        phone : "0123456789",
-        contactType : "Client",
-        photoUrl : "../assets/image/Photo.png"
+        email : "toulemondemichel@mail.com",
+        address : "123 rue Bidon, 99000 Fakeville",
+        contactType : "client",
+        photoUrl : "../assets/image/Photo.png",
+        birthDate : "1971-10-11"
       },
       {
         id : 97,
-        contactName : "Dubois Olivier",
-        birthDate : "28/02/1972",
-        address : "123 rue Bidon",
-        city : "Fakeville",
+        contactName : "Société Dubois",
         phone : "0123456789",
-        contactType : "Fournisseur",
-        photoUrl : "../assets/image/Photo.png"
+        email : "dubois@societe.com",
+        address : "123 rue Bidon, 99000 Fakeville",
+        contactType : "fournisseur",
+        photoUrl : "../assets/image/Photo.png",
+        website : "http://www.bois-de-chauffage.net"
+      },
+      {
+        id : 666,
+        contactName : "Sémoa",
+        firstName : "Storm",
+        phone : "0666666666",
+        email : "siderealstorm@mail.com",
+        address : "66 rue Jean Jaurès, 59286 Roost-Warendin",
+        contactType : "client",
+        photoUrl : "../assets/image/Photo.png",
+        birthDate : "1994-03-26"
       }
     ];
 
@@ -66,4 +68,20 @@ export class ContactService {
       // On renvoie l'objet
       return contact;
     }
+
+    // Fonction pour ajouter un contact à la liste
+    saveNewContact(contact : Contact) : void {
+      contact.id = this.contacts.length + 1;
+      this.contacts.push(contact);
+    }
+
+    // // TODO Fonction pour générer un ID aléatoire
+    // generateId() : number {
+    //   const newId = 0;
+    //   do {
+
+    //   }
+    //   while ()
+    //   return newId;
+    // }
 }

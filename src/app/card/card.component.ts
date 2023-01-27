@@ -26,6 +26,7 @@ export class CardComponent implements OnInit{
 
   // Fonction pour rediriger vers un autre composant :
   goToDetails() : void {
+    // On passe l'ID en paramètre du chemin
     this.route.navigateByUrl("contacts/" + this.contact.id);
   }
 }

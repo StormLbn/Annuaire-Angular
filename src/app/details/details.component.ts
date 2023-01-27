@@ -23,5 +23,19 @@ export class DetailsComponent implements OnInit {
 
     // On récupère les données du contact via le service, en utilisant l'ID récupéré dans l'URL
     this.contact = this.service.getContactById(this.id);
+
+    this.setAge()
+  }
+
+
+  // BONUS : fonction pour calculer l'âge et l'ajouter aux paramètres du Contact
+  setAge() : void {
+    const today = new Date(Date.now());
+    if (this.contact.birthDate) {
+      const birthDate = new Date(this.contact.birthDate);
+      const age = today.getFullYear() - birthDate.getFullYear();
+      this.contact.age = age;
+    }
   }
 }
+

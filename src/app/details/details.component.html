@@ -1,12 +1,44 @@
-<div>
-    <h2>
-        {{ contact.contactName }}
-    </h2>
+<h2>
+    Détails du {{ contact.contactType }} :
+</h2>
 
-    <ul>
-        <li>{{contact.address}}</li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+<div class="card-wrapper" [ngClass]="{
+    'supplier' : contact.contactType === 'fournisseur',
+    'client' : contact.contactType === 'client'
+}">
+    <div class="photo">
+        <img [src]="contact.photoUrl" alt="Photo de {{ contact.contactName }} {{ contact.firstName }}">
+    </div>
+
+    <div class="infos">
+        <h3>
+            {{ contact.contactName }} {{ contact.firstName }}
+        </h3>
+
+        <p *ngIf = "contact.birthDate">
+            Né.e le {{ contact.birthDate | date: 'dd/MM/yyyy' }} ({{ contact.age }} ans)
+        </p>
+
+        <ul>
+            <li *ngIf = "contact.phone">
+                Téléphone : {{ contact.phone }}
+            </li>
+            <li *ngIf = "contact.email">
+                E-mail : {{ contact.email }}
+            </li>
+            <li *ngIf = "contact.address">
+                Adresse : {{ contact.address }}
+            </li>
+            <li *ngIf = "contact.website">
+                Site web : <a [href]="contact.website" target="_blank">{{ contact.website }}</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- TODO mise en forme des bouton -->
+<div>
+    <button routerLink="/contacts">Retour à la liste</button>
+    <button routerLink="/contacts/new">Nouveau contact</button>
 </div>

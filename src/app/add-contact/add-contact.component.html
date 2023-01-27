@@ -1,1 +1,75 @@
-<p>add-contact works!</p>
+<form [formGroup] = "form" (ngSubmit) = "onSubmit()">
+    
+    <p>
+        Valide : {{ form.valid }}
+    </p>
+
+    <div>
+        <h3>
+            Type de contact :
+        </h3>
+        <p>
+            <input type="radio" formControlName="contactType" value="client">
+            <label for="client">Client</label><br>
+
+
+            <input type="radio" formControlName="contactType" value="fournisseur">
+            <label for="fournisseur">Fournisseur</label><br>
+        </p>
+    </div>
+
+    <p>
+        <label for = "contactName">Nom : </label>
+        <input type="text" id = "contactName" formControlName="contactName">
+    </p>
+
+    <p>
+        <label for = "firstname">Prénom : </label>
+        <input type="text" id = "firstname" formControlName="firstname">
+    </p>
+
+    <p>
+        <label for="birthDate">Date de naissance : </label>
+        <input type="date" formControlName="birthDate" id="birthDate">
+    </p>
+
+    <p>
+        <label for="photoUrl">Saisir l'URL d'une photo : </label>
+        <input type="text" formControlName="photoUrl" id="photoUrl">
+    </p>
+
+    <p>
+        <label for="phone">Numéro de téléphone : </label>
+        <input type="text" formControlName="phone" id="phone">
+    </p>
+
+    <p>
+        <label for="email">Adresse e-mail : </label>
+        <input type="text" formControlName="email" id="email">
+    </p>
+
+    <p>
+        <label for="website">Site internet : </label>
+        <input type="text" formControlName="website" id="website">
+    </p>
+
+    <div formGroupName="address">
+        <h3>Adresse :</h3>
+        <p>
+            <label for="street">Rue : </label>
+            <input type="text" id="street" formControlName="street">
+        </p>
+        <p>
+            <label for="city">Ville : </label>
+            <input type="text" id="city" formControlName="city">
+        </p>
+        <p>
+            <label for="postcode">CP : </label>
+            <input type="text" id="postcode" formControlName="postcode">
+        </p>
+    </div>
+    <div>
+        <button type="submit" [disabled]="!form.valid">Envoyer</button>
+    </div>
+
+</form>

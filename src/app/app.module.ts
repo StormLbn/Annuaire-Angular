@@ -9,6 +9,7 @@ import { Route } from './app.routes';
 import { DetailsComponent } from './details/details.component';
 import { FooterComponent } from './footer/footer.component';
 import { AddContactComponent } from './add-contact/add-contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AddContactComponent } from './add-contact/add-contact.component';
   ],
   imports: [
     BrowserModule,
-    Route
+    Route,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

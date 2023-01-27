@@ -16,18 +16,18 @@
         </h3>
 
         <p *ngIf = "contact.birthDate">
-            Né.e le {{ contact.birthDate }} ({{ contact.age }} ans)
+            Né.e le {{ contact.birthDate | date: 'dd/MM/yyyy' }} ({{ contact.age }} ans)
         </p>
 
         <ul>
-            <li>
+            <li *ngIf = "contact.phone">
                 Téléphone : {{ contact.phone }}
             </li>
-            <li>
+            <li *ngIf = "contact.email">
                 E-mail : {{ contact.email }}
             </li>
-            <li>
-                Adresse : {{ contact.address }}, {{ contact.postcode }} {{ contact.city }}
+            <li *ngIf = "contact.address">
+                Adresse : {{ contact.address }}
             </li>
             <li *ngIf = "contact.website">
                 Site web : <a [href]="contact.website" target="_blank">{{ contact.website }}</a>
@@ -35,4 +35,10 @@
         </ul>
     </div>
 
+</div>
+
+<!-- TODO mise en forme des bouton -->
+<div>
+    <button routerLink="/contacts">Retour à la liste</button>
+    <button routerLink="/contacts/new">Nouveau contact</button>
 </div>

@@ -2,19 +2,17 @@ export class Contact {
     // Déclaration des variables
     
     // On utilise ! pour ne pas initialiser la variable
-    id !: number;
-    contactName !: string;
-    phone !: string;
-    email !: string;
-    address !: string;
-    postcode !: string;
-    city !: string;
     contactType !: string;
+    contactName !: string;
     photoUrl !: string;
-
+    
+    id ?: number;
     // On utilise ? pour indiquer que la variable est facultative
+    phone ?: string;
+    email ?: string;
+    website ?: string;
+    address ?: string;
     firstName ?: string;
     birthDate ?: string;
     age ?: number;
-    website ?: string;
 }

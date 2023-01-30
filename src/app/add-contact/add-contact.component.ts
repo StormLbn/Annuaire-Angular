@@ -1,6 +1,6 @@
 // Composant pour formulaire de nouveau contact
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Contact } from '../models/contact.model';
 import { ContactService } from '../services/contact.service';
@@ -14,6 +14,7 @@ export class AddContactComponent implements OnInit {
 
   // Déclaration de la variable pour le formulaire
   form !: FormGroup;
+  address !: FormGroup;
 
   // Déclaration de la variable pour le Contact
   @Input() contact !: Contact;
@@ -34,29 +35,31 @@ ngOnInit(): void {
   //         postcode : new FormControl('')
   //       })
   //     });
-      
-      // Création d'un formulaire en utilisant FormBuilder :
-      this.form = this.fb.group({
-        contactType : ['', Validators.required],
-        contactName : ['', Validators.required],
-        photoUrl : ['../assets/image/Photo.png', Validators.required],
-        phone : ['', Validators.pattern('/0[1-9][0-9]{8}/g')],
-        email : ['', Validators.email],
-        website : [''],
-        address : this.fb.group({
-          street : [''],
-          city : [''],
-          postcode : [''],
-        }),
-        birthDate : [''],
-        firstname : [''],
-      })
-    }
 
+    // Création d'un formulaire en utilisant FormBuilder :
+    this.form = this.fb.group({
+      contactType : ['', Validators.required],
+      contactName : ['test', Validators.required],
+      photoUrl : ['../assets/image/Photo.png', Validators.required],
+      phone : ['0796876889', Validators.pattern('0[1-9]\\d{8}')],
+      email : ['', Validators.email],
+      website : [''],
+      birthDate : [''],
+      firstname : [''],
+      address : this.fb.group({
+        street : [''],
+        city : [''],
+        postcode : [''],
+      })
+    })
+  }
+
+  // Fonction qui se déclenche au moment de valider le formulaire :
   onSubmit(): void {
     const datas = this.form.value;
     const address = "";
 
+    // Concaténation des valeurs de l'adresse si les champs sont remplis
     if (datas["street"] && datas["city"] && datas["postcode"]) {
       const address = datas["street"] + ", " + datas["postcode"] + " " + datas["city"];
     }
@@ -74,6 +77,5 @@ ngOnInit(): void {
     }
     this.service.saveNewContact(this.contact);
   }
-
 }
 

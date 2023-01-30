@@ -12,9 +12,8 @@
             <input type="radio" formControlName="contactType" value="client">
             <label for="client">Client</label><br>
 
-
             <input type="radio" formControlName="contactType" value="fournisseur">
-            <label for="fournisseur">Fournisseur</label><br>
+            <label for="fournisseur">Fournisseur</label>
         </p>
     </div>
 
@@ -53,8 +52,10 @@
         <input type="text" formControlName="website" id="website">
     </p>
 
+    <h3>Adresse :</h3>
+    <!-- <input type="checkbox" name="addressCheckbox" id="addressCheckbox" (change)="onChanges">
+    <label for="addressCheckbox">Ajouter une adresse</label> -->
     <div formGroupName="address">
-        <h3>Adresse :</h3>
         <p>
             <label for="street">Rue : </label>
             <input type="text" id="street" formControlName="street">
